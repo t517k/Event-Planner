@@ -3,7 +3,7 @@ Contains the `brute_force` function for finding the optimal arrangement of activ
 is within a given total budget and total duration
 '''
 
-def brute_force(activities:list, maximum_duration:int, budget:int):
+def brute_force(activities:list, maximum_duration:int, budget:int) -> list[dict]:
     '''
     Function which takes in a list `activites` and checks every possible
     ordering to find the best legal arrangement of activites

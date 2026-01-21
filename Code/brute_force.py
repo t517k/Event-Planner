@@ -3,7 +3,13 @@ Contains the `brute_force` function for finding the optimal arrangement of activ
 is within a given total budget and total duration
 '''
 
-def brute_force(activities:list, maximum_duration:int, budget:int) -> list[dict]:
+# Import os for dealing with file paths
+import os
+
+# Import the get_activities_from_file function from the file_utils module
+from file_utils import get_activities_from_file
+
+def brute_force(activities:list, maximum_duration:int, maxmimum_budget:int) -> list[dict]:
     '''
     Function which takes in a list `activites` and checks every possible
     ordering to find the best legal arrangement of activites
@@ -57,7 +63,7 @@ def brute_force(activities:list, maximum_duration:int, budget:int) -> list[dict]
             continue
 
         # Check the arrangement is within the specified budget
-        if current_arrangement_cost > budget:
+        if current_arrangement_cost > maxmimum_budget:
             continue
 
         # Check if the current arrangement if better than the saved best
@@ -69,23 +75,18 @@ def brute_force(activities:list, maximum_duration:int, budget:int) -> list[dict]
     # Return the best arrangment of activites for maximising enjoyment
     return best_arrangement
 
-print(brute_force([
-    {
-        "name": "Activity 1",
-        "duration": 2,
-        "cost": 20,
-        "enjoyment": 30
-    },
-    {
-        "name": "Activity 2",
-        "duration": 5,
-        "cost": 70,
-        "enjoyment": 50
-    },
-    {
-        "name": "Activity 3",
-        "duration": 10,
-        "cost": 100,
-        "enjoyment": 100
-    }
-], 12, 200))
+
+if __name__ == "__main__":
+    # Get the location of the project directory
+    CURRENT_DIR = os.getcwd()
+    # FILE_LOC represents the global location of the file containing the list of activities
+    FILE_LOC = f"{CURRENT_DIR}/Input_Files/input_small.txt"
+
+    # Get the maximum duration, budget and list of activities from the file
+    max_duration, max_budget, activities_list = get_activities_from_file(FILE_LOC)
+
+    # Locate the best arrangement of activities for maxmimising
+    # enjoyment using a brute force algorithm
+    best_activity_order = brute_force(activities_list, max_duration, max_budget)
+
+    print(best_activity_order)

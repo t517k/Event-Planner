@@ -5,12 +5,13 @@ is within a given total budget and total duration
 
 def brute_force(activities:list, maximum_duration:int, maxmimum_budget:int) -> list[dict]:
     '''
-    Function which takes in a list `activites` and checks every possible
-    ordering to find the best legal arrangement of activites
+    Function which takes in a list `activites` and uses a brute force algorithm
+    to calculate the best arrangement of activities to maximise joy whilst remaining
+    within a specified duration (`maximum_duration`) and budget (`maxmimum_budget`)
 
     - `activities`: The input list of activites to loop through every arrangement of
     - `maximum_duration`: The maximum total duration of the arrangement of activities
-    - `budget`: The maximum total cost of the arrangement of activities
+    - `maxmimum_budget`: The maximum total cost of the arrangement of activities
     '''
 
     best_arrangement = []
@@ -57,8 +58,8 @@ def brute_force(activities:list, maximum_duration:int, maxmimum_budget:int) -> l
             continue
 
         # Check the arrangement is within the specified budget
-        if current_arrangement_cost > maxmimum_budget:
-            continue
+        #if current_arrangement_cost > maxmimum_budget:
+        #    continue
 
         # Check if the current arrangement if better than the saved best
         # and if so then update the best arrangement

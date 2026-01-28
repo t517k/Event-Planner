@@ -1,5 +1,7 @@
 '''
-Docstring for Code.event_planner
+Where the brute force and dynamic programming approaches for finding the optimal 
+arrangement of activities based on duration, cost and enjoyment are tested
+against each other to compare performance and correctness
 '''
 
 # Import os for dealing with file paths
@@ -11,6 +13,9 @@ import time
 
 # Import the brute_force function from the brute_force module
 from brute_force import brute_force
+
+# Import the knapsack function from the knapsack module
+from knapsack import knapsack
 
 # Import the get_activities_from_file function from the file_utils module
 from file_utils import get_activities_from_file
@@ -30,7 +35,7 @@ if __name__ == "__main__":
 
     # Locate the best arrangement of activities for maxmimising
     # enjoyment using a brute force algorithm
-    best_activity_order = brute_force(activities_list, max_duration, max_budget)
+    brute_force_activity_order = brute_force(activities_list, max_duration, max_budget)
 
     # Record the current time in ms after running the brute force function
     end_time_ms = time.time() * 1000
@@ -39,5 +44,20 @@ if __name__ == "__main__":
     brute_force_time = end_time_ms - start_time_ms
 
     print(f"Brute force took: {brute_force_time}ms")
+    print(brute_force_activity_order)
 
-    print(best_activity_order)
+    # Record the current time in ms before running the knapsack function
+    start_time_ms = time.time() * 1000
+
+    # Locate the best arrangement of activities for maxmimising
+    # enjoyment using the knapsack algorithm
+    knapsack_activity_order = knapsack(activities_list, max_duration, max_budget)
+
+    # Record the current time in ms after running the knapsack function
+    end_time_ms = time.time() * 1000
+
+    # Calculate the time the brute force approach took in milliseconds
+    knapsack_time = end_time_ms - start_time_ms
+
+    print(f"Knapsack took: {knapsack_time}ms")
+    print(knapsack_activity_order)

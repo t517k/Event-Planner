@@ -1,13 +1,13 @@
 '''
-Contains the `knapsack` function for finding the optimal arrangement of activites that
+Contains the `dynamic_solver` function for finding the optimal arrangement of activites that
 is within a given total budget and total duration
 '''
 
 def dynamic_solver(activities:list, maximum_duration:int, maxmimum_budget:int) -> list[dict]:
     '''
-    Function which takes in a list `activites` and uses the 0/1 Knapsack algorithm
-    to calculate the best arrangement of activities to maximise joy whilst remaining
-    within a specified duration (`maximum_duration`) and budget (`maxmimum_budget`)
+    Function which takes in a list `activites` and calculates the best arrangement 
+    of activities to maximise joy whilst remaining within a specified duration (`maximum_duration`) 
+    and budget (`maxmimum_budget`)
 
     - `activities`: The input list of activites
     - `maximum_duration`: The maximum total duration of the arrangement of activities
@@ -18,9 +18,9 @@ def dynamic_solver(activities:list, maximum_duration:int, maxmimum_budget:int) -
     # Maxmimum activity "weight"
     max_weight = maximum_duration
 
-    knapsack_mat = []
+    mat = []
 
-    # Setup the Knapsack matrix
+    # Setup the matrix
     for _row in range(activity_count + 1):
         activity_row = []
 
@@ -28,12 +28,12 @@ def dynamic_solver(activities:list, maximum_duration:int, maxmimum_budget:int) -
         for _column in range(max_weight + 1):
             activity_row.append(0)
 
-        # Add the row to the Knapsac matrix
-        knapsack_mat.append(activity_row)
+        # Add the row to the matrix
+        mat.append(activity_row)
 
 
-    # Loop over the rows in the Knapsack matrix
-    for y, row in enumerate(knapsack_mat):
+    # Loop over the rows in the matrix
+    for y, row in enumerate(mat):
         # Skip the first row
         if y == 0:
             continue
@@ -47,39 +47,39 @@ def dynamic_solver(activities:list, maximum_duration:int, maxmimum_budget:int) -
 
         # Loop through each item in the row
         for x, _ in enumerate(row):
-            # The value above the current square in the knapsack matrix
-            joy_above = knapsack_mat[y - 1][x]
+            # The value above the current square in the matrix
+            joy_above = mat[y - 1][x]
             # Offset the joy above to counter the weight of the current activity
-            joy_above_weight_offset = knapsack_mat[y - 1][x - activity_weight]
+            joy_above_weight_offset = mat[y - 1][x - activity_weight]
 
             # If activity's weight is too large then the best solution
             # is the joy above as its too heavy to add in currently
             if x < activity_weight:
-                knapsack_mat[y][x] = joy_above
+                mat[y][x] = joy_above
             else:
-                knapsack_mat[y][x] = max(activity_joy + joy_above_weight_offset, joy_above)
+                mat[y][x] = max(activity_joy + joy_above_weight_offset, joy_above)
 
 
     best_arrangement = []
     column_index = 0
 
-    # Flip the Knapsack matrix upside down (reverse order)
-    rev_knapsack_mat = knapsack_mat[::-1]
+    # Flip the matrix upside down (reverse order)
+    rev_mat = mat[::-1]
 
     # Start at the top right corner (best enjoyment value) and
     # work backwards to figure out which activities should be included
-    for y, row in enumerate(rev_knapsack_mat):
+    for y, row in enumerate(rev_mat):
         # Skip the last row
-        if y + 1 >= len(rev_knapsack_mat):
+        if y + 1 >= len(rev_mat):
             continue
 
         # Reverse the order of the row so that now the best
         # enjoyment is at location (0, 0)
         reversed_row = row[::-1]
-        reversed_row_above = rev_knapsack_mat[y + 1][::-1]
+        reversed_row_above = rev_mat[y + 1][::-1]
 
         # Reverse the order of the activities to match the
-        # reversed knapsack matrix row
+        # reversed matrix row
         reversed_activities = activities[::-1]
 
         # Get the row activities "weight"

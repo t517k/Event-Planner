@@ -6,8 +6,7 @@ is within a given total budget and total duration
 def dynamic_solver(activities:list, maximum_duration:int, maxmimum_budget:int) -> list[dict]:
     '''
     Function which takes in a list `activites` and calculates the best arrangement 
-    of activities to maximise joy whilst remaining within a specified duration (`maximum_duration`) 
-    and budget (`maxmimum_budget`)
+    of activities to maximise joy whilst remaining within a specified duration (`maximum_duration`)
 
     - `activities`: The input list of activites
     - `maximum_duration`: The maximum total duration of the arrangement of activities
@@ -100,3 +99,4 @@ def dynamic_solver(activities:list, maximum_duration:int, maxmimum_budget:int) -
 
     # Return the best arrangment of activites for maximising enjoyment
     return best_arrangement
+

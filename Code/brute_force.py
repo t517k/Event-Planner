@@ -7,7 +7,7 @@ def brute_force(activities:list, maximum_duration:int, maxmimum_budget:int) -> l
     '''
     Function which takes in a list `activites` and uses a brute force algorithm
     to calculate the best arrangement of activities to maximise joy whilst remaining
-    within a specified duration (`maximum_duration`) and budget (`maxmimum_budget`)
+    within a specified duration (`maximum_duration`)
 
     - `activities`: The input list of activites to loop through every arrangement of
     - `maximum_duration`: The maximum total duration of the arrangement of activities
@@ -62,3 +62,4 @@ def brute_force(activities:list, maximum_duration:int, maxmimum_budget:int) -> l
 
     # Return the best arrangment of activites for maximising enjoyment
     return best_arrangement
+

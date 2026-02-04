@@ -2,7 +2,7 @@ def greedy_heuristic(activities:list, maximum_duration:int, maximum_budget:int) 
     '''
     Function which takes in a list `activites` and uses a greedy heuristic to calculate 
     the best arrangement of activities to maximise joy whilst remaining within a 
-    specified duration (`maximum_duration`)
+    specified duration (`maximum_duration`) and cost ('maximum_budget')
 
     - `activities`: The input list of activites to loop through every arrangement of
     - `maximum_duration`: The maximum total duration of the arrangement of activities
@@ -40,12 +40,13 @@ def greedy_heuristic(activities:list, maximum_duration:int, maximum_budget:int) 
         best_arrangement.append(best_item)
         current_duration += best_item["duration"]
         current_cost += best_item["cost"]
-        #removes activity that was used from the remaiining activities
+        #removes activity that was used from the remaining activities
         remaining_activities.remove(best_item)
     
     return best_arrangement
 
         
+
 
 
 

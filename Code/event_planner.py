@@ -20,12 +20,16 @@ from dynamic_solver import dynamic_solver
 # Import the get_activities_from_file function from the file_utils module
 from file_utils import get_activities_from_file
 
+# Import the write_brute_force_part and write_dynamic_solver_part from the write_output module
+from write_output import write_brute_force_part, write_dynamic_solver_part
+
 
 if __name__ == "__main__":
     # Get the location of the project directory
     CURRENT_DIR = os.getcwd()
     # FILE_LOC represents the global location of the file containing the list of activities
-    FILE_LOC = f"{CURRENT_DIR}/Input_Files/input_medium.txt"
+    input_file = "input_medium.txt"
+    FILE_LOC = f"{CURRENT_DIR}/Input_Files/{input_file}"
 
     # Get the maximum duration, budget and list of activities from the file
     max_duration, max_budget, activities_list = get_activities_from_file(FILE_LOC)
@@ -63,3 +67,6 @@ if __name__ == "__main__":
     print(f"Dynamic solver took: {dynamic_solver_time}ms")
     # Reverse the order of the arrangement to match brute forces output
     print(dynamic_solver_activity_order[::-1])
+
+    write_brute_force_part(input_file, max_duration, max_budget, brute_force_activity_order, brute_force_time)
+    write_dynamic_solver_part(dynamic_solver_activity_order, dynamic_solver_time)

@@ -1,4 +1,4 @@
-def greedy_heuristic(activities:list, maximum_duration:int, maxmimum_budget:int) -> list[dict]:
+def greedy_heuristic(activities:list, maximum_duration:int, maximum_budget:int) -> list[dict]:
     '''
     Function which takes in a list `activites` and uses a greedy heuristic to calculate 
     the best arrangement of activities to maximise joy whilst remaining within a 
@@ -11,24 +11,29 @@ def greedy_heuristic(activities:list, maximum_duration:int, maxmimum_budget:int)
     best_arrangement = []
     best_arrangement_enjoyment = 0
 
-    # Get the length and number of arrangements of the set
-    activities_length = len(activities)
-
+    remaining_activities = activities.copy()
     current_duration = 0
+    current_budget = 0
     while current_duration < maximum_duration:
         best_ratio = 0
         best_item = None
-        for item in activities:
-            current_ratio = item["enjoyment"]/item["duration"]
-            current_duration += item["duration"]
-            if current_ratio > best_ratio and current_duration <= maximum_duration:
-                best_ratio = current_ratio
-                best_item = item
-                current_duration += item["duration"]
-            current_duration -= item["duration"]
+        for item in remaining_activities:
+            if (current_duration + item["duration"] <= maximum_duration
+                and current_budget + item["cost"] <= maximum_budget):
+                ratio = item["enjoyment"] / item["duration"]
+                if ratio > best_ratio:
+                    best_ratio = ratio
+                    best_item = item
+                    
+        if best_item is None:
+            break
+            
         best_arrangement.append(best_item)
-        best_arrangement_enjoyment += best_item["enjoyment"]
+        current_duration += best_item["duration"]
+        current_budget += best_item["cost"]
+        remaining_activities.remove(best_item)
     
     return best_arrangement
 
         
+

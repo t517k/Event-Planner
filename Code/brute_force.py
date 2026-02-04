@@ -3,7 +3,7 @@ Contains the `brute_force` function for finding the optimal arrangement of activ
 is within a given total budget and total duration
 '''
 
-def brute_force(activities:list, maximum_duration:int, maxmimum_budget:int) -> list[dict]:
+def brute_force(activities:list, maximum_duration:int, maximum_budget:int) -> list[dict]:
     '''
     Function which takes in a list `activites` and uses a brute force algorithm
     to calculate the best arrangement of activities to maximise joy whilst remaining
@@ -62,4 +62,5 @@ def brute_force(activities:list, maximum_duration:int, maxmimum_budget:int) -> l
 
     # Return the best arrangment of activites for maximising enjoyment
     return best_arrangement
+
 

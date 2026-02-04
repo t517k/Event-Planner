@@ -13,14 +13,14 @@ def greedy_heuristic(activities:list, maximum_duration:int, maximum_budget:int) 
 
     remaining_activities = activities.copy()
     current_duration = 0
-    current_budget = 0
-    while current_duration < maximum_duration:
+    current_cost= 0
+    while current_duration < maximum_duration and current_cost < maximum_budget:
         best_ratio = 0
         best_item = None
         for item in remaining_activities:
             if (current_duration + item["duration"] <= maximum_duration
-                and current_budget + item["cost"] <= maximum_budget):
-                ratio = item["enjoyment"] / item["duration"]
+                and current_cost + item["cost"] <= maximum_budget):
+                ratio = item["enjoyment"] / (item["duration"]+item["cost"])
                 if ratio > best_ratio:
                     best_ratio = ratio
                     best_item = item
@@ -30,10 +30,11 @@ def greedy_heuristic(activities:list, maximum_duration:int, maximum_budget:int) 
             
         best_arrangement.append(best_item)
         current_duration += best_item["duration"]
-        current_budget += best_item["cost"]
+        current_cost += best_item["cost"]
         remaining_activities.remove(best_item)
     
     return best_arrangement
 
         
+
 

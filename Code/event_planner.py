@@ -70,6 +70,7 @@ if __name__ == "__main__":
     # Reverse the order of the arrangement to match brute forces output
     print(dynamic_solver_activity_order[::-1])
 
-    write_brute_force_part(input_file, max_duration, max_budget, brute_force_activity_order, brute_force_time)
+    write_brute_force_part(INPUT_FILE, max_duration, max_budget, brute_force_activity_order, brute_force_time)
     write_dynamic_solver_part(dynamic_solver_activity_order, dynamic_solver_time)
+
 

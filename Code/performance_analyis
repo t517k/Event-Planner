@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-y_dynamic = np.array()
+y_dynamic = np.array([2.579999715089798e-05, 4.679999500513077e-05, 6.089999526739121e-05,    )
 y_brute = np.array()
+
+

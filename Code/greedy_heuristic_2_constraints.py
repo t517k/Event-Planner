@@ -50,3 +50,4 @@ def greedy_heuristic(activities:list, maximum_duration:int, maximum_budget:int) 
 
 
 
+

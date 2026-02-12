@@ -1,0 +1,221 @@
+Input File: input_small.txt
+Available Time: 10 hours
+Available Budget: £200
+
+--- GREEDY HEURISTICS ALGORITHM ---
+Selected Activities:
+  - Pizza-Workshop (2 hours, £60, enjoyment 100)
+  - Game-Night (3 hours, £80, enjoyment 120)
+  - Museum-Trip (4 hours, £100, enjoyment 150)
+
+Total Enjoyment: 370
+Total Time Used: 9 hours
+Total Cost: £240
+
+--- DYNAMIC PROGRAMMING ALGORITHM ---
+Selected Activities:
+  - Game-Night (3 hours, £80, enjoyment 120)
+  - Museum-Trip (4 hours, £100, enjoyment 150)
+  - Pizza-Workshop (2 hours, £60, enjoyment 100)
+
+Total Enjoyment: 370
+Total Time Used: 9 hours
+Total Cost: £240
+
+========================================
+
+Input File: input_medium.txt
+Available Time: 15 hours
+Available Budget: £300
+
+--- GREEDY HEURISTICS ALGORITHM ---
+Selected Activities:
+  - Laser-Tag (2 hours, £90, enjoyment 130)
+  - Escape-Room (2 hours, £85, enjoyment 115)
+  - Art-Workshop (2 hours, £70, enjoyment 95)
+  - Karaoke-Night (2 hours, £40, enjoyment 70)
+  - Cooking-Class (3 hours, £75, enjoyment 105)
+  - Bowling (3 hours, £80, enjoyment 100)
+
+Total Enjoyment: 615
+Total Time Used: 14 hours
+Total Cost: £440
+
+--- DYNAMIC PROGRAMMING ALGORITHM ---
+Selected Activities:
+  - Film-Screening (3 hours, £30, enjoyment 90)
+  - Art-Workshop (2 hours, £70, enjoyment 95)
+  - Bowling (3 hours, £80, enjoyment 100)
+  - Laser-Tag (2 hours, £90, enjoyment 130)
+  - Cooking-Class (3 hours, £75, enjoyment 105)
+  - Escape-Room (2 hours, £85, enjoyment 115)
+
+Total Enjoyment: 635
+Total Time Used: 15 hours
+Total Cost: £430
+
+========================================
+
+Input File: input_large.txt
+Available Time: 20 hours
+Available Budget: £500
+
+--- GREEDY HEURISTICS ALGORITHM ---
+Selected Activities:
+  - Wine-Tasting (2 hours, £100, enjoyment 150)
+  - Dance-Workshop (2 hours, £50, enjoyment 90)
+  - Comedy-Show (3 hours, £80, enjoyment 135)
+  - Pottery-Class (3 hours, £85, enjoyment 125)
+  - Rock-Climbing (4 hours, £110, enjoyment 160)
+  - Kayaking (5 hours, £130, enjoyment 190)
+  - Orientation-Walk (1 hours, £10, enjoyment 30)
+
+Total Enjoyment: 880
+Total Time Used: 20 hours
+Total Cost: £565
+
+Execution Time: 2.199999988079071e-05 seconds
+
+--- DYNAMIC PROGRAMMING ALGORITHM ---
+Selected Activities:
+  - Orientation-Walk (1 hours, £10, enjoyment 30)
+  - Wine-Tasting (2 hours, £100, enjoyment 150)
+  - Rock-Climbing (4 hours, £110, enjoyment 160)
+  - Pottery-Class (3 hours, £85, enjoyment 125)
+  - Dance-Workshop (2 hours, £50, enjoyment 90)
+  - Kayaking (5 hours, £130, enjoyment 190)
+  - Comedy-Show (3 hours, £80, enjoyment 135)
+
+Total Enjoyment: 880
+Total Time Used: 20 hours
+Total Cost: £565
+
+Execution Time: 0.00011840000003576279 seconds
+
+========================================
+
+Input File: input_30.txt
+Available Time: 22 hours
+Available Budget: £301
+
+--- GREEDY HEURISTICS ALGORITHM ---
+Selected Activities:
+  - Creative-Trip-3 (1 hours, £149, enjoyment 157)
+  - Nature-Music-24 (1 hours, £77, enjoyment 110)
+  - Community-Workshop-28 (1 hours, £102, enjoyment 105)
+  - Innovation-Trip-18 (2 hours, £119, enjoyment 169)
+  - Activity-20 (1 hours, £50, enjoyment 79)
+  - Innovation-Festival-13 (2 hours, £128, enjoyment 150)
+  - Film-Meeting-5 (1 hours, £96, enjoyment 74)
+  - Business-Seminar-2 (1 hours, £65, enjoyment 66)
+  - Environment-Sport-21 (3 hours, £129, enjoyment 185)
+  - Language-Performance-1 (2 hours, £36, enjoyment 97)
+  - Gaming-Lecture-8 (4 hours, £102, enjoyment 184)
+  - Activity-27 (3 hours, £145, enjoyment 131)
+
+Total Enjoyment: 1507
+Total Time Used: 22 hours
+Total Cost: £1198
+
+--- DYNAMIC PROGRAMMING ALGORITHM ---
+Selected Activities:
+  - Language-Performance-1 (2 hours, £36, enjoyment 97)
+  - Business-Seminar-2 (1 hours, £65, enjoyment 66)
+  - Creative-Trip-3 (1 hours, £149, enjoyment 157)
+  - Film-Meeting-5 (1 hours, £96, enjoyment 74)
+  - Gaming-Lecture-8 (4 hours, £102, enjoyment 184)
+  - Innovation-Festival-13 (2 hours, £128, enjoyment 150)
+  - Innovation-Trip-18 (2 hours, £119, enjoyment 169)
+  - Activity-20 (1 hours, £50, enjoyment 79)
+  - Environment-Sport-21 (3 hours, £129, enjoyment 185)
+  - Nature-Music-24 (1 hours, £77, enjoyment 110)
+  - Activity-27 (3 hours, £145, enjoyment 131)
+  - Community-Workshop-28 (1 hours, £102, enjoyment 105)
+
+Total Enjoyment: 1507
+Total Time Used: 22 hours
+Total Cost: £1198
+
+========================================
+
+Input File: input_100.txt
+Available Time: 50 hours
+Available Budget: £914
+
+--- GREEDY HEURISTICS ALGORITHM ---
+Selected Activities:
+  - Community-Trip-31 (1 hours, £145, enjoyment 178)
+  - Creative-Trip-3 (1 hours, £149, enjoyment 157)
+  - Gaming-Walk-88 (1 hours, £108, enjoyment 134)
+  - Leadership-Art-98 (1 hours, £117, enjoyment 127)
+  - Language-Seminar-75 (1 hours, £121, enjoyment 125)
+  - Career-Sport-50 (1 hours, £73, enjoyment 117)
+  - Nature-Music-24 (1 hours, £77, enjoyment 110)
+  - Community-Workshop-28 (1 hours, £102, enjoyment 105)
+  - Wellness-Competition-55 (1 hours, £64, enjoyment 100)
+  - Career-Panel-94 (2 hours, £143, enjoyment 176)
+  - Coding-Panel-33 (2 hours, £142, enjoyment 170)
+  - Innovation-Trip-18 (2 hours, £119, enjoyment 169)
+  - Language-Music-95 (1 hours, £83, enjoyment 81)
+  - Activity-20 (1 hours, £50, enjoyment 79)
+  - Adventure-Tour-51 (2 hours, £143, enjoyment 154)
+  - Innovation-Festival-13 (2 hours, £128, enjoyment 150)
+  - Film-Meeting-5 (1 hours, £96, enjoyment 74)
+  - Gaming-Competition-40 (1 hours, £96, enjoyment 74)
+  - Culture-Screening-97 (2 hours, £116, enjoyment 144)
+  - Creative-Game-100 (2 hours, £109, enjoyment 140)
+  - Coding-Art-80 (2 hours, £85, enjoyment 138)
+  - Activity-74 (1 hours, £76, enjoyment 67)
+  - Business-Seminar-2 (1 hours, £65, enjoyment 66)
+  - Career-Tour-42 (2 hours, £150, enjoyment 132)
+  - Career-Tour-34 (2 hours, £68, enjoyment 129)
+  - Activity-76 (2 hours, £140, enjoyment 126)
+  - Design-Presentation-60 (2 hours, £77, enjoyment 125)
+  - Environment-Sport-21 (3 hours, £129, enjoyment 185)
+  - Literature-Fair-66 (3 hours, £114, enjoyment 185)
+  - Activity-93 (3 hours, £131, enjoyment 176)
+  - Fitness-Trip-41 (2 hours, £118, enjoyment 117)
+
+Total Enjoyment: 4010
+Total Time Used: 50 hours
+Total Cost: £3334
+
+--- DYNAMIC PROGRAMMING ALGORITHM ---
+Selected Activities:
+  - Business-Seminar-2 (1 hours, £65, enjoyment 66)
+  - Creative-Trip-3 (1 hours, £149, enjoyment 157)
+  - Film-Meeting-5 (1 hours, £96, enjoyment 74)
+  - Innovation-Festival-13 (2 hours, £128, enjoyment 150)
+  - Innovation-Trip-18 (2 hours, £119, enjoyment 169)
+  - Activity-20 (1 hours, £50, enjoyment 79)
+  - Environment-Sport-21 (3 hours, £129, enjoyment 185)
+  - Nature-Music-24 (1 hours, £77, enjoyment 110)
+  - Community-Workshop-28 (1 hours, £102, enjoyment 105)
+  - Community-Trip-31 (1 hours, £145, enjoyment 178)
+  - Coding-Panel-33 (2 hours, £142, enjoyment 170)
+  - Career-Tour-34 (2 hours, £68, enjoyment 129)
+  - Gaming-Competition-40 (1 hours, £96, enjoyment 74)
+  - Fitness-Trip-41 (2 hours, £118, enjoyment 117)
+  - Career-Tour-42 (2 hours, £150, enjoyment 132)
+  - Career-Sport-50 (1 hours, £73, enjoyment 117)
+  - Adventure-Tour-51 (2 hours, £143, enjoyment 154)
+  - Wellness-Competition-55 (1 hours, £64, enjoyment 100)
+  - Design-Presentation-60 (2 hours, £77, enjoyment 125)
+  - Literature-Fair-66 (3 hours, £114, enjoyment 185)
+  - Activity-74 (1 hours, £76, enjoyment 67)
+  - Language-Seminar-75 (1 hours, £121, enjoyment 125)
+  - Activity-76 (2 hours, £140, enjoyment 126)
+  - Coding-Art-80 (2 hours, £85, enjoyment 138)
+  - Gaming-Walk-88 (1 hours, £108, enjoyment 134)
+  - Activity-93 (3 hours, £131, enjoyment 176)
+  - Career-Panel-94 (2 hours, £143, enjoyment 176)
+  - Language-Music-95 (1 hours, £83, enjoyment 81)
+  - Culture-Screening-97 (2 hours, £116, enjoyment 144)
+  - Leadership-Art-98 (1 hours, £117, enjoyment 127)
+  - Creative-Game-100 (2 hours, £109, enjoyment 140)
+
+Total Enjoyment: 4010
+Total Time Used: 50 hours
+Total Cost: £3334
+
+========================================

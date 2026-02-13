@@ -1,17 +1,38 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-y_dynamic = np.array([2.579999715089798e-05, 4.679999500513077e-05, 6.089999526739121e-05, 8.799999952316284e-05, 0.00011500000953674317, 0.00023349999636411667)
-y_brute = np.array([3.6500006914138796e-05, 0.0008608999997377396, 0.036752399995923044, 1.4319716999977827, 51.976652099996805, 1938.6185229999944)
+# line graph
+y_dynamic = np.array([2.579999715089798e-05, 4.679999500513077e-05, 6.089999526739121e-05, 8.799999952316284e-05, 0.00011500000953674317, 0.00023349999636411667])
+y_brute = np.array([3.6500006914138796e-05, 0.0008608999997377396, 0.036752399995923044, 1.4319716999977827, 51.976652099996805, 1938.6185229999944])
+
 
 x_num = np.array([5, 10, 15, 20, 25, 30])
 
-plt.plot(x_num, y_dynamic)
-plt.plot(x_num, y_brute)
+y_factor = []
 
+# bar chart
+for i in range(0, 6):
+    y_factor.append((y_brute[i] / y_dynamic[i]))
+    
+print(y_factor)
+
+plt.bar(x_num, y_factor)
+plt.xlabel('Number of Activities')
+plt.ylabel('Speedup Factor (Brute Force Time / Dynamic Time)')
 plt.yscale('log')
 plt.show()
 
+plt.title('Execution Time: Brute Force vs Dynamic Approach')
+plt.plot(x_num, y_dynamic, label='Dynamic Approach')
+plt.plot(x_num, y_brute, label='Brute Force')
 
+
+plt.xlabel('Number of Activities')
+plt.ylabel('Execution Time')
+
+plt.yscale('log')
+
+plt.legend()
+plt.show()
 
 

@@ -39,7 +39,7 @@ Select one of the following and follow the instructions.
 
 ## Dependencies
 
-- Up-to-date version of python
+- Pythen version `3.12.4` or higher
 - File structure in order
 - An IDE of user's choice
 
@@ -83,3 +83,4 @@ Nehal Tumia
 Ollie Pearce
 
 Trystan Keigher
+
